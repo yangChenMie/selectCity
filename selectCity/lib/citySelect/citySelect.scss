@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import "../../scss/mixin";
+.showLetter {
+  display: none;
+  position: fixed;
+  color: $mainColor;
+  width: 0.5rem;
+  height:0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.16rem;
+  margin-left:-0.25rem;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: $mainColor 1px solid;
+  text-align: center;
+  z-index: 999999;
+}
+.allContent{
+  letter-spacing: 0;
+  font-size: 0.14rem;
+  .cityMain{
+    overflow-x: hidden;
+    .searchCity{
+      padding:0.05rem 0.1rem;
+      .serchInput{
+        width:3.4rem;
+        height:0.34rem;
+        font-size: 0.14rem;
+        border:none;
+        text-align: center;
+      }
+    }
+    .smallTitle{
+      font-size: 0.12rem;
+      width:100%;
+      background: #ebebeb;
+      color:#909090;
+      padding-left:0.12rem;
+      height:0.24rem;
+      line-height: 0.24rem;
+    }
+    .listTitle{
+      height:0.3rem;
+      width:100%;
+      background: #ebebeb;
+      padding-left:0.15rem;
+      line-height: 0.3rem;
+      font-weight: 600;
+    }
+    .smallP{
+      width:0.98rem;;
+      height:0.32rem;
+      line-height: 0.32rem;
+      background: $whiteColor;
+      text-align: center;
+    }
+    .mapCityWrap{
+      padding:0.15rem 0.1rem;
+      .mapCity{
+
+      }
+    }
+    .hotCityWrap{
+      padding:0.15rem 0.1rem;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      .hotCity{
+        margin-bottom: 0.1rem;
+      }
+    }
+  }
+  .cityList{
+    .oneCityList{
+      .oneCity{
+        padding-left: 0.12rem;
+        height:0.4rem;
+        background: $whiteColor;
+        line-height: 0.4rem;
+        border-bottom: 1px solid #ebebeb;
+        word-break: break-all;
+        overflow: hidden;
+      }
+    }
+  }
+  .letterList{
+    width:0.2rem;
+    background: $whiteColor;
+    text-align: center;
+    height: auto;
+    .letter{
+      position: fixed;
+      top: 20%;
+      right: 0;
+      width: 0.15rem;
+      text-align: center;
+      font-size: 0.12rem;
+      a{
+        color: $mainColor;
+      }
+    }
+  }
+  .acitveCity{
+    color:#2577e3!important;
+  }
+}

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/*以375-750 rem布局*/
+/*box size*/
+/*显示show省略号...*/
+/* minheight */
+/* arrow(direction,size,color);*/
+/*边框及圆弧度 border and border-radius*/
+/*块居中*/
+/* clearfix */
+.showLetter {
+  display: none;
+  position: fixed;
+  color: #2577e3;
+  width: 0.5rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.16rem;
+  margin-left: -0.25rem;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: #2577e3 1px solid;
+  text-align: center;
+  z-index: 999999; }
+
+.allContent {
+  letter-spacing: 0;
+  font-size: 0.14rem; }
+  .allContent .cityMain {
+    overflow-x: hidden; }
+    .allContent .cityMain .searchCity {
+      padding: 0.05rem 0.1rem; }
+      .allContent .cityMain .searchCity .serchInput {
+        width: 3.4rem;
+        height: 0.34rem;
+        font-size: 0.14rem;
+        border: none;
+        text-align: center; }
+    .allContent .cityMain .smallTitle {
+      font-size: 0.12rem;
+      width: 100%;
+      background: #ebebeb;
+      color: #909090;
+      padding-left: 0.12rem;
+      height: 0.24rem;
+      line-height: 0.24rem; }
+    .allContent .cityMain .listTitle {
+      height: 0.3rem;
+      width: 100%;
+      background: #ebebeb;
+      padding-left: 0.15rem;
+      line-height: 0.3rem;
+      font-weight: 600; }
+    .allContent .cityMain .smallP {
+      width: 0.98rem;
+      height: 0.32rem;
+      line-height: 0.32rem;
+      background: #ffffff;
+      text-align: center; }
+    .allContent .cityMain .mapCityWrap {
+      padding: 0.15rem 0.1rem; }
+    .allContent .cityMain .hotCityWrap {
+      padding: 0.15rem 0.1rem;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      .allContent .cityMain .hotCityWrap .hotCity {
+        margin-bottom: 0.1rem; }
+  .allContent .cityList .oneCityList .oneCity {
+    padding-left: 0.12rem;
+    height: 0.4rem;
+    background: #ffffff;
+    line-height: 0.4rem;
+    border-bottom: 1px solid #ebebeb;
+    word-break: break-all;
+    overflow: hidden; }
+  .allContent .letterList {
+    width: 0.2rem;
+    background: #ffffff;
+    text-align: center;
+    height: auto; }
+    .allContent .letterList .letter {
+      position: fixed;
+      top: 20%;
+      right: 0;
+      width: 0.15rem;
+      text-align: center;
+      font-size: 0.12rem; }
+      .allContent .letterList .letter a {
+        color: #2577e3; }
+  .allContent .acitveCity {
+    color: #2577e3 !important; }
+
+/*# sourceMappingURL=citySelect.css.map */

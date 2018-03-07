@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../zepto/zepto.min.js"></script>
+    <link rel="stylesheet" href="../../scss/common.css">
+    <link rel="stylesheet" href="citySelect.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZaBfSGz8m0LM4BgTWfimRrBC"></script>
+    <script src="citySelect.js"></script>
+</head>
+<body class="bgGray">
+    <div id="showLetter" class="showLetter"><span>A</span></div>
+    <div class="allContent disFlex ">
+        <div class="cityMain flex1">
+            <div class="searchCity">
+                <input class="serchInput" type="text" placeholder="北京/PEK/beijing/bj">
+            </div>
+            <div class="smallTitle"  id="mapCityh">定位城市</div>
+            <div class="mapCityWrap">
+                <p class="mapCity smallP">请选择</p>
+            </div>
+            <div class="smallTitle">热门城市</div>
+            <div class="hotCityWrap disFlex">
+                <p class="hotCity smallP">成都</p>
+                <p class="hotCity smallP">成都</p>
+                <p class="hotCity smallP">成都</p>
+                <p class="hotCity smallP">成都</p>
+                <p class="hotCity smallP">成都</p>
+                <p class="hotCity smallP">成都</p>
+                <p class="hotCity smallP">成都</p>
+                <p class="hotCity smallP">成都</p>
+                <p class="hotCity smallP">成都</p>
+            </div>
+            <div class="cityList">
+                <div class="oneCityList" data-id="A">
+                    <div class="listTitle" id="A1">A</div>
+                    <p class="oneCity" data-id=" " >阿坝</p>
+                    <p class="oneCity" data-id=" " >阿尔山</p>
+                    <p class="oneCity" data-id=" ">阿坝</p>
+                    <p class="oneCity" data-id=" ">阿坝</p>
+                    <p class="oneCity" data-id=" ">阿坝</p>
+                </div>
+                <div class="oneCityList">
+                    <div class="listTitle" id="B1">B</div>
+                    <p class="oneCity" data-id=" ">阿坝</p>
+                    <p class="oneCity" data-id=" ">阿尔山</p>
+                    <p class="oneCity" data-id=" ">阿坝</p>
+                    <p class="oneCity" data-id=" ">阿坝</p>
+                    <p class="oneCity" data-id=" ">阿坝</p>
+                </div>
+            </div>
+        </div>
+        <div class="letterList">
+            <ul class="letter">
+                <li><a href="javascript:;">A</a></li>
+                <li><a href="javascript:;">B</a></li>
+                <li><a href="javascript:;">C</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="allContent ifHide">
+        <div class="searchList cityList ">
+            <div class="oneCityList">
+                <p class="oneCity" data-id=" ">阿坝</p>
+                <p class="oneCity" data-id=" ">阿尔山</p>
+                <p class="oneCity" data-id=" ">阿坝</p>
+                <p class="oneCity" data-id=" ">阿坝</p>
+                <p class="oneCity" data-id=" ">阿坝</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    $(function () {
+        $("#mapCityh").on("click",function () {
+            event.stopPropagation();
+            var vcity=new citySelect({
+                type:0,
+                callback:function(cityNameme,dataId){
+                    console.log(cityNameme,dataId);
+                },
+                searchUrl:'data/city.txt'
+            });
+            vcity.init();
+        });
+    });
+
+</script>
